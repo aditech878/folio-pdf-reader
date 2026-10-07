@@ -1,0 +1,33 @@
+name: Test Snap startup
+
+on:
+  workflow_dispatch:
+    inputs:
+      build_run:
+        description: GitHub Actions run containing the Snap artifact
+        required: true
+        default: '37608028470'
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download built Snap
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh run download '${{ inputs.build_run }}' --name folio-pdf-reader-snap --dir dist
+      - name: Install Snap
+        run: sudo snap install --dangerous dist/folio-pdf-reader_*.snap
+      - name: Open sample PDF
+        run: |
+          set +e
+          timeout 12s env QT_QPA_PLATFORM=offscreen snap run folio-pdf-reader "$PWD/assets/store/sample.pdf" >startup.log 2>&1
+          result=$?
+          set -e
+          cat startup.log
+          test "$result" -eq 124
