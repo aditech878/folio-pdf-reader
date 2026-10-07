@@ -4,6 +4,9 @@ base: core22
 version: '0.2.0'
 license: AGPL-3.0-or-later
 donation: https://buymeacoffee.com/aadityabanwari
+website: https://github.com/aditech878/folio-pdf-reader
+source-code: https://github.com/aditech878/folio-pdf-reader
+issues: https://github.com/aditech878/folio-pdf-reader/issues
 summary: A focused reader for your PDFs
 description: |
   Folio is a desktop PDF reader with continuous pages, text search,

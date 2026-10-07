@@ -6,6 +6,7 @@ PDFs are opened locally; the app does not upload documents.
 
 Folio is released under the GNU AGPL version 3 or later. The full license is
 in `LICENSE`. If you enjoy the app, you can [support its development](https://buymeacoffee.com/aadityabanwari).
+The source is available at https://github.com/aditech878/folio-pdf-reader.
 
 ## Run
 
