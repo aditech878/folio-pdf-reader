@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Folio PDF Reader
+Comment=A focused reader for your PDFs
+Exec=folio-pdf-reader %F
+Icon=/snap/folio-pdf-reader/current/meta/gui/icon.svg
+Terminal=false
+Categories=Office;Viewer;
+MimeType=application/pdf;application/x-pdf;
+StartupNotify=true
