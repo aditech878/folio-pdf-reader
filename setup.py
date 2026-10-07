@@ -4,7 +4,7 @@ from setuptools import setup
 
 setup(
     name='folio-pdf-reader',
-    version='0.2.0',
+    version='0.2.1',
     description='A focused desktop PDF reader',
     license='AGPL-3.0-or-later',
     license_files=['LICENSE'],
